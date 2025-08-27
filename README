@@ -1,0 +1,37 @@
+# Excluder
+
+A simple Node.js CLI tool to exclude specified ranges from included ranges.
+
+## Usage
+
+```sh
+node index.js -i <include_ranges> -e <exclude_ranges>
+```
+
+- `<include_ranges>`: Comma-separated list of ranges (e.g., `1-10,20-30`)
+- `<exclude_ranges>`: Comma-separated list of ranges to exclude (e.g., `3-5,22-25`)
+
+### Example
+
+```sh
+node index.js -i 10-100, -e 20-30
+```
+
+Output: 10-19,31-100
+
+## Script Arguments
+
+- `-i`: Include ranges (required)
+- `-e`: Exclude ranges (required)
+
+## Output
+
+The script prints the resulting ranges in the same `start-end` comma-separated format.
+
+## Files
+
+- [`index.js`](index.js): Main CLI script.
+
+## License
+
+MIT
